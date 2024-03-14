@@ -11,11 +11,19 @@
 
         table{
            width: 500px; 
-           border-collapse: collapse;         
+           border-collapse: collapse;
+           position: relative;         
         }
 
         td, th{
             border: 1px solid black;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         thead{
@@ -23,9 +31,24 @@
             color: white;
 
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: lightslategray;
+        }
         
         td.num{
             text-align: right;
+        }
+
+        tfoot{
+            background-color: gray;
+            color: white;
         }
     </style>
 </head>
@@ -34,6 +57,7 @@
     <!--
         Anatomia para Tabelas Grandes
         table
+        CAPTION
            thead
                tr, td, th
            tbody
@@ -42,63 +66,142 @@
                tr, td, th
     -->
     <table>
+        <caption>População das unidades Federativas</caption>
         <thead>
           <tr>
-            <th>Posição</th>
-            <th>Unidade da Federação</th>
-            <th>População (2022)</tr>           
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População (2022)</th>           
           </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1º</td>
+            <tr>                
                 <td>São Paulo</td>
                 <td class="num">44 411 238</td>
 
             </tr> 
-            <tr>
-                <td>2º</td>
+            <tr>               
                 <td>Minas Gerais</td>
                 <td class="num">20 539 989</td>
             </tr> 
-            <tr>
-                <td>3º</td>
+            <tr>                
                 <td>Rio de Janeiro</td>
                 <td class="num">16 055 174</td>
             </tr>
-            <tr>
-                <td>4º</td>
+            <tr>               
                 <td>Bahia</td>
                 <td class="num">14 016 906</td>
             </tr>
-            <tr>
-                <td>5º</td>
+            <tr>                
                 <td>Paraná</td>
                 <td class="num">11 444 380</td>
             </tr>
-            <tr>
-                <td>6º</td>
+            <tr>                
                 <td>Rio Grande do Sul</td>
                 <td class="num">10 882 965</td>
             </tr>
-            <tr>
-                <td>7º</td>
+            <tr>               
                 <td>Pernambuco</td>
                 <td class="num">9 058 931</td>
             </tr>
-            <tr>
-                <td>8º</td>
+            <tr>                
                 <td>Ceará</td>
                 <td class="num">8 794 957</td>
             </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 610 361</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 056 495</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 776 699</td>
+            </tr>
+            <tr>
+                <td> Paraíba</td>
+                <td class="num">3 974 687</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3 941 613</td>
+            </tr>
+            <tr>
+                <td> Espírito Santo</td>
+                <td class="num">3 833 712</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 658 649</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 302 729</td>
+            </tr>
+            <tr>
+                <td> Piauí</td>
+                <td class="num">3 271 199</td>
+            </tr>
+            <tr>
+                <td> Alagoas</td>
+                <td class="num">3 127 683</td>
+            </tr>
+            <tr>
+                <td> Distrito Federal</td>
+                <td class="num">2 817 381</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 757 013</td>
+            </tr>
+            <tr>
+                <td> Sergipe</td>
+                <td class="num">2 210 004</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 581 196</td>
+            </tr>
+            <tr>
+                <td> Tocantins</td>
+                <td class="num">1 511 460</td>
+            </tr>
+            <tr>
+                <td> Acre</td>
+                <td class="num">830 018</td>
+            </tr>
+            <tr>
+                <td> Amapá</td>
+                <td class="num">733 759</td>
+
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">636 707</td>
+            </tr>
+                    
+
+            
         </tbody>
-        <tfoot>
-            <th>Posição</th>
-            <th>Total de Habitantes</th>
+        <tfoot>            
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>135.329.260</strong> </td>
         </tfoot>
-    </table>
+    </table> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolorum architecto ullam veniam tempore maiores asperiores dicta quasi praesentium laudantium. Totam quis commodi animi facere soluta eligendi pariatur vel velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quaerat error inventore. Sapiente magni tempore perferendis sed ut tempora, porro beatae accusamus nesciunt, eaque, fuga cum voluptatum fugiat hic inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptatem animi, incidunt esse quo dignissimos unde dolores eius quam nemo sed omnis tempora. Saepe aspernatur sed odio perferendis sequi quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat sed architecto fuga? Illo reiciendis similique numquam impedit laborum porro ducimus hic delectus accusamus perspiciatis fugit dolor, ea, possimus fugiat beatae?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, cupiditate illo eligendi, id voluptates magnam asperiores obcaecati placeat nesciunt deserunt nisi fugiat non error vel culpa? Commodi laborum dignissimos necessitatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolores assumenda earum nostrum veniam totam debitis, nisi eaque molestiae eligendi at mollitia. Deserunt expedita, rem laboriosam ullam quaerat deleniti amet?</p> 
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium dolor fugit quod repudiandae! Accusantium illum sapiente dicta accusamus et facilis odit corrupti nisi quos labore eligendi nostrum, pariatur quas? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt odio ea sed, blanditiis excepturi esse consectetur enim eligendi vero expedita eum ab saepe dolorum non laboriosam exercitationem! Consectetur, totam accusamus!</p>  
 
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempora molestias veritatis facere quam! Molestiae eveniet deserunt ea. Iure non modi animi quibusdam accusamus odit, beatae reiciendis praesentium distinctio atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laboriosam possimus sequi repellendus placeat dolorem corporis beatae sit quaerat deleniti labore minima perferendis assumenda, illo distinctio dolor rerum aspernatur nulla.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste rem delectus, tempore culpa minus, non excepturi repudiandae voluptate quibusdam explicabo laborum ex modi, obcaecati laudantium ut blanditiis. Quasi, ad incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum dolor rem sapiente? Nemo quo placeat quod earum blanditiis consequuntur at veritatis quis reiciendis? Dolorem rem praesentium laboriosam odio omnis.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut incidunt voluptatibus dignissimos cumque vero quaerat, sequi molestias recusandae provident autem. Nulla corporis mollitia atque sed iusto neque harum temporibus minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aut delectus ut alias perspiciatis accusantium possimus laborum commodi pariatur corporis quasi voluptatibus excepturi fugit nostrum tempore placeat similique expedita repudiandae.</p>
 </body>
 </html>
