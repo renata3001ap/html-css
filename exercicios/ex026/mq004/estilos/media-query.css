@@ -41,6 +41,7 @@ grandes telas: acima de 1200px
 }
 @media screen and (min-width: 768px) and (max-width: 992px){ /*Tablet*/
     body{
+
         background-image: url(../imagem/back-tablet.jpg);
     }
     img#phone { display:none; }
@@ -63,7 +64,7 @@ grandes telas: acima de 1200px
 }
 
 
-@media screen and (min-width: 1200px){/*Grandes Telas*/
+@media screen and (min-width: 1200px) and (max-width: 1400px){/*Grandes Telas*/
     body {
         background-image: url(../imagem/back-tv.jpg);
     }    
